@@ -38,6 +38,10 @@
 		E2CE8DF3242EA84E00D234B3 /* PlayerScored.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2CE8DE7242E963C00D234B3 /* PlayerScored.cpp */; };
 		E2CE8DF4242EA85400D234B3 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2CE8DEB242E9A4800D234B3 /* Player.cpp */; };
 		E2CE8DFC242F571300D234B3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2CE8DFB242F571300D234B3 /* main.cpp */; };
+		E2CE8E02242F71A500D234B3 /* ChatRoom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2CE8E00242F71A500D234B3 /* ChatRoom.cpp */; };
+		E2CE8E05242F71E100D234B3 /* Person.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2CE8E03242F71E100D234B3 /* Person.cpp */; };
+		E2CE8E06242F7CAA00D234B3 /* ChatRoom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2CE8E00242F71A500D234B3 /* ChatRoom.cpp */; };
+		E2CE8E07242F7CAE00D234B3 /* Person.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2CE8E03242F71E100D234B3 /* Person.cpp */; };
 		E2E7CF0C2398362800C80C80 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E7CF0B2398362800C80C80 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -353,6 +357,10 @@
 		E2CE8DEF242E9C5B00D234B3 /* Coach.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Coach.hpp; sourceTree = "<group>"; };
 		E2CE8DF9242F571300D234B3 /* ChatRoom */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ChatRoom; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2CE8DFB242F571300D234B3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E2CE8E00242F71A500D234B3 /* ChatRoom.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ChatRoom.cpp; sourceTree = "<group>"; };
+		E2CE8E01242F71A500D234B3 /* ChatRoom.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ChatRoom.hpp; sourceTree = "<group>"; };
+		E2CE8E03242F71E100D234B3 /* Person.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Person.cpp; sourceTree = "<group>"; };
+		E2CE8E04242F71E100D234B3 /* Person.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Person.hpp; sourceTree = "<group>"; };
 		E2E7CF0423982EFB00C80C80 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E2E7CF092398362800C80C80 /* BinaryTreeIterator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BinaryTreeIterator; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E7CF0B2398362800C80C80 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -945,6 +953,10 @@
 			isa = PBXGroup;
 			children = (
 				E2CE8DFB242F571300D234B3 /* main.cpp */,
+				E2CE8E00242F71A500D234B3 /* ChatRoom.cpp */,
+				E2CE8E01242F71A500D234B3 /* ChatRoom.hpp */,
+				E2CE8E03242F71E100D234B3 /* Person.cpp */,
+				E2CE8E04242F71E100D234B3 /* Person.hpp */,
 			);
 			path = ChatRoom;
 			sourceTree = "<group>";
@@ -1538,6 +1550,8 @@
 			files = (
 				E2CE8DED242E9A4800D234B3 /* Player.cpp in Sources */,
 				E29A1E0B235814FF003FD77B /* Person.cpp in Sources */,
+				E2CE8E05242F71E100D234B3 /* Person.cpp in Sources */,
+				E2CE8E02242F71A500D234B3 /* ChatRoom.cpp in Sources */,
 				E2CE8DF0242E9C5B00D234B3 /* Coach.cpp in Sources */,
 				E29A1DA82354EBFB003FD77B /* main.cpp in Sources */,
 				E2CE8DE9242E963C00D234B3 /* PlayerScored.cpp in Sources */,
@@ -1727,6 +1741,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2CE8E07242F7CAE00D234B3 /* Person.cpp in Sources */,
+				E2CE8E06242F7CAA00D234B3 /* ChatRoom.cpp in Sources */,
 				E2CE8DFC242F571300D234B3 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,7 +7,18 @@
 //
 
 #include <iostream>
+#include "Person.hpp"
+#include "ChatRoom.hpp"
 
 int main(int argc, const char * argv[]) {
+    ChatRoom room;
+    
+    auto aniket = room.Join(Person{"Aniket"});
+    auto anchit = room.Join(Person("Anchit"));
+    auto ankita = room.Join(Person("Ankita"));
+    
+    aniket.Say("Hi Everyone!");
+    aniket.PM("Ankita", "Hi ankita!");
+    
     return 0;
 }
