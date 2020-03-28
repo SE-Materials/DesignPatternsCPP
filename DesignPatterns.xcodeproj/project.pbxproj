@@ -30,8 +30,30 @@
 		E29A1E9B235C19B5003FD77B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29A1E9A235C19B5003FD77B /* main.cpp */; };
 		E29A1EA6235C1C4C003FD77B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29A1EA5235C1C4C003FD77B /* main.cpp */; };
 		E29A1EB1235C2059003FD77B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29A1EB0235C2059003FD77B /* main.cpp */; };
+		E2CE8DE2242E918100D234B3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2CE8DE1242E918100D234B3 /* main.cpp */; };
+		E2CE8DE9242E963C00D234B3 /* PlayerScored.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2CE8DE7242E963C00D234B3 /* PlayerScored.cpp */; };
+		E2CE8DED242E9A4800D234B3 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2CE8DEB242E9A4800D234B3 /* Player.cpp */; };
+		E2CE8DF0242E9C5B00D234B3 /* Coach.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2CE8DEE242E9C5B00D234B3 /* Coach.cpp */; };
+		E2CE8DF2242EA84900D234B3 /* Coach.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2CE8DEE242E9C5B00D234B3 /* Coach.cpp */; };
+		E2CE8DF3242EA84E00D234B3 /* PlayerScored.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2CE8DE7242E963C00D234B3 /* PlayerScored.cpp */; };
+		E2CE8DF4242EA85400D234B3 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2CE8DEB242E9A4800D234B3 /* Player.cpp */; };
+		E2CE8DFC242F571300D234B3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2CE8DFB242F571300D234B3 /* main.cpp */; };
 		E2E7CF0C2398362800C80C80 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E7CF0B2398362800C80C80 /* main.cpp */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		E2CE8DF1242EA60400D234B3 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		E29A1DA32354EBFB003FD77B /* CopyFiles */ = {
@@ -232,6 +254,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		E2CE8DDD242E918100D234B3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		E2CE8DF7242F571300D234B3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		E2E7CF072398362800C80C80 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,6 +341,18 @@
 		E29A1EA5235C1C4C003FD77B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E29A1EAE235C2059003FD77B /* CommunicationProxy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CommunicationProxy; sourceTree = BUILT_PRODUCTS_DIR; };
 		E29A1EB0235C2059003FD77B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E2CE8DDF242E918100D234B3 /* EventBroker */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EventBroker; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2CE8DE1242E918100D234B3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E2CE8DE6242E95C600D234B3 /* Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		E2CE8DE7242E963C00D234B3 /* PlayerScored.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerScored.cpp; sourceTree = "<group>"; };
+		E2CE8DE8242E963C00D234B3 /* PlayerScored.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PlayerScored.hpp; sourceTree = "<group>"; };
+		E2CE8DEA242E982C00D234B3 /* Game.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		E2CE8DEB242E9A4800D234B3 /* Player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		E2CE8DEC242E9A4800D234B3 /* Player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
+		E2CE8DEE242E9C5B00D234B3 /* Coach.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Coach.cpp; sourceTree = "<group>"; };
+		E2CE8DEF242E9C5B00D234B3 /* Coach.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Coach.hpp; sourceTree = "<group>"; };
+		E2CE8DF9242F571300D234B3 /* ChatRoom */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ChatRoom; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2CE8DFB242F571300D234B3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E2E7CF0423982EFB00C80C80 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E2E7CF092398362800C80C80 /* BinaryTreeIterator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BinaryTreeIterator; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E7CF0B2398362800C80C80 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -461,6 +513,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E2CE8DDC242E918100D234B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2CE8DF6242F571300D234B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E2E7CF062398362800C80C80 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -508,6 +574,8 @@
 				E29A1EA3235C1C4C003FD77B /* VirtualProxy */,
 				E29A1EAE235C2059003FD77B /* CommunicationProxy */,
 				E2E7CF092398362800C80C80 /* BinaryTreeIterator */,
+				E2CE8DDF242E918100D234B3 /* EventBroker */,
+				E2CE8DF9242F571300D234B3 /* ChatRoom */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -848,9 +916,43 @@
 			path = CommunicationProxy;
 			sourceTree = "<group>";
 		};
+		E2CE8DDA242E913900D234B3 /* Mediator */ = {
+			isa = PBXGroup;
+			children = (
+				E2CE8DFA242F571300D234B3 /* ChatRoom */,
+				E2CE8DE0242E918100D234B3 /* EventBroker */,
+			);
+			path = Mediator;
+			sourceTree = "<group>";
+		};
+		E2CE8DE0242E918100D234B3 /* EventBroker */ = {
+			isa = PBXGroup;
+			children = (
+				E2CE8DE1242E918100D234B3 /* main.cpp */,
+				E2CE8DEE242E9C5B00D234B3 /* Coach.cpp */,
+				E2CE8DEF242E9C5B00D234B3 /* Coach.hpp */,
+				E2CE8DE6242E95C600D234B3 /* Event.h */,
+				E2CE8DE7242E963C00D234B3 /* PlayerScored.cpp */,
+				E2CE8DE8242E963C00D234B3 /* PlayerScored.hpp */,
+				E2CE8DEA242E982C00D234B3 /* Game.h */,
+				E2CE8DEB242E9A4800D234B3 /* Player.cpp */,
+				E2CE8DEC242E9A4800D234B3 /* Player.hpp */,
+			);
+			path = EventBroker;
+			sourceTree = "<group>";
+		};
+		E2CE8DFA242F571300D234B3 /* ChatRoom */ = {
+			isa = PBXGroup;
+			children = (
+				E2CE8DFB242F571300D234B3 /* main.cpp */,
+			);
+			path = ChatRoom;
+			sourceTree = "<group>";
+		};
 		E2E7CF0223982E8000C80C80 /* Behavioral */ = {
 			isa = PBXGroup;
 			children = (
+				E2CE8DDA242E913900D234B3 /* Mediator */,
 				E2E7CF0323982EE000C80C80 /* Iterator */,
 			);
 			path = Behavioral;
@@ -1250,6 +1352,41 @@
 			productReference = E29A1EAE235C2059003FD77B /* CommunicationProxy */;
 			productType = "com.apple.product-type.tool";
 		};
+		E2CE8DDE242E918100D234B3 /* EventBroker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2CE8DE3242E918100D234B3 /* Build configuration list for PBXNativeTarget "EventBroker" */;
+			buildPhases = (
+				E2CE8DDB242E918100D234B3 /* Sources */,
+				E2CE8DDC242E918100D234B3 /* Frameworks */,
+				E2CE8DDD242E918100D234B3 /* CopyFiles */,
+			);
+			buildRules = (
+				E2CE8DF1242EA60400D234B3 /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = EventBroker;
+			productName = EventBroker;
+			productReference = E2CE8DDF242E918100D234B3 /* EventBroker */;
+			productType = "com.apple.product-type.tool";
+		};
+		E2CE8DF8242F571300D234B3 /* ChatRoom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2CE8DFD242F571300D234B3 /* Build configuration list for PBXNativeTarget "ChatRoom" */;
+			buildPhases = (
+				E2CE8DF5242F571300D234B3 /* Sources */,
+				E2CE8DF6242F571300D234B3 /* Frameworks */,
+				E2CE8DF7242F571300D234B3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChatRoom;
+			productName = ChatRoom;
+			productReference = E2CE8DF9242F571300D234B3 /* ChatRoom */;
+			productType = "com.apple.product-type.tool";
+		};
 		E2E7CF082398362800C80C80 /* BinaryTreeIterator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2E7CF0D2398362800C80C80 /* Build configuration list for PBXNativeTarget "BinaryTreeIterator" */;
@@ -1342,6 +1479,12 @@
 					E29A1EAD235C2059003FD77B = {
 						CreatedOnToolsVersion = 10.2;
 					};
+					E2CE8DDE242E918100D234B3 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					E2CE8DF8242F571300D234B3 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					E2E7CF082398362800C80C80 = {
 						CreatedOnToolsVersion = 10.2;
 					};
@@ -1382,6 +1525,8 @@
 				E29A1EA2235C1C4C003FD77B /* VirtualProxy */,
 				E29A1EAD235C2059003FD77B /* CommunicationProxy */,
 				E2E7CF082398362800C80C80 /* BinaryTreeIterator */,
+				E2CE8DDE242E918100D234B3 /* EventBroker */,
+				E2CE8DF8242F571300D234B3 /* ChatRoom */,
 			);
 		};
 /* End PBXProject section */
@@ -1391,8 +1536,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2CE8DED242E9A4800D234B3 /* Player.cpp in Sources */,
 				E29A1E0B235814FF003FD77B /* Person.cpp in Sources */,
+				E2CE8DF0242E9C5B00D234B3 /* Coach.cpp in Sources */,
 				E29A1DA82354EBFB003FD77B /* main.cpp in Sources */,
+				E2CE8DE9242E963C00D234B3 /* PlayerScored.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1564,6 +1712,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E2CE8DDB242E918100D234B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2CE8DF4242EA85400D234B3 /* Player.cpp in Sources */,
+				E2CE8DF3242EA84E00D234B3 /* PlayerScored.cpp in Sources */,
+				E2CE8DF2242EA84900D234B3 /* Coach.cpp in Sources */,
+				E2CE8DE2242E918100D234B3 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2CE8DF5242F571300D234B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2CE8DFC242F571300D234B3 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E2E7CF052398362800C80C80 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1626,6 +1793,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/boost/1.71.0/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/boost/1.71.0/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1679,6 +1848,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/boost/1.71.0/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/boost/1.71.0/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -2062,6 +2233,42 @@
 			};
 			name = Release;
 		};
+		E2CE8DE4242E918100D234B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E2CE8DE5242E918100D234B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E2CE8DFE242F571300D234B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E2CE8DFF242F571300D234B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		E2E7CF0E2398362800C80C80 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2284,6 +2491,24 @@
 			buildConfigurations = (
 				E29A1EB3235C2059003FD77B /* Debug */,
 				E29A1EB4235C2059003FD77B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2CE8DE3242E918100D234B3 /* Build configuration list for PBXNativeTarget "EventBroker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2CE8DE4242E918100D234B3 /* Debug */,
+				E2CE8DE5242E918100D234B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2CE8DFD242F571300D234B3 /* Build configuration list for PBXNativeTarget "ChatRoom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2CE8DFE242F571300D234B3 /* Debug */,
+				E2CE8DFF242F571300D234B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

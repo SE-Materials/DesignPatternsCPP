@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include <boost/signals2.hpp>
 
 int main(int argc, const char * argv[]) {
     // insert code here...
