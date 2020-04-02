@@ -42,6 +42,8 @@
 		E2CE8E05242F71E100D234B3 /* Person.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2CE8E03242F71E100D234B3 /* Person.cpp */; };
 		E2CE8E06242F7CAA00D234B3 /* ChatRoom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2CE8E00242F71A500D234B3 /* ChatRoom.cpp */; };
 		E2CE8E07242F7CAE00D234B3 /* Person.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2CE8E03242F71E100D234B3 /* Person.cpp */; };
+		E2CE8E102433D2FD00D234B3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2CE8E0F2433D2FD00D234B3 /* main.cpp */; };
+		E2CE8E1B2433D50500D234B3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2CE8E1A2433D50500D234B3 /* main.cpp */; };
 		E2E7CF0C2398362800C80C80 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E7CF0B2398362800C80C80 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -276,6 +278,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		E2CE8E0B2433D2FD00D234B3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		E2CE8E162433D50500D234B3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		E2E7CF072398362800C80C80 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -361,6 +381,10 @@
 		E2CE8E01242F71A500D234B3 /* ChatRoom.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ChatRoom.hpp; sourceTree = "<group>"; };
 		E2CE8E03242F71E100D234B3 /* Person.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Person.cpp; sourceTree = "<group>"; };
 		E2CE8E04242F71E100D234B3 /* Person.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Person.hpp; sourceTree = "<group>"; };
+		E2CE8E0D2433D2FD00D234B3 /* Memento */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Memento; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2CE8E0F2433D2FD00D234B3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E2CE8E182433D50500D234B3 /* UndoAndRedo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UndoAndRedo; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2CE8E1A2433D50500D234B3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E2E7CF0423982EFB00C80C80 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E2E7CF092398362800C80C80 /* BinaryTreeIterator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BinaryTreeIterator; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E7CF0B2398362800C80C80 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -535,6 +559,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E2CE8E0A2433D2FD00D234B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2CE8E152433D50500D234B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E2E7CF062398362800C80C80 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -584,6 +622,8 @@
 				E2E7CF092398362800C80C80 /* BinaryTreeIterator */,
 				E2CE8DDF242E918100D234B3 /* EventBroker */,
 				E2CE8DF9242F571300D234B3 /* ChatRoom */,
+				E2CE8E0D2433D2FD00D234B3 /* Memento */,
+				E2CE8E182433D50500D234B3 /* UndoAndRedo */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -961,9 +1001,35 @@
 			path = ChatRoom;
 			sourceTree = "<group>";
 		};
+		E2CE8E082433D2AA00D234B3 /* Memento */ = {
+			isa = PBXGroup;
+			children = (
+				E2CE8E192433D50500D234B3 /* UndoAndRedo */,
+				E2CE8E0E2433D2FD00D234B3 /* Memento */,
+			);
+			path = Memento;
+			sourceTree = "<group>";
+		};
+		E2CE8E0E2433D2FD00D234B3 /* Memento */ = {
+			isa = PBXGroup;
+			children = (
+				E2CE8E0F2433D2FD00D234B3 /* main.cpp */,
+			);
+			path = Memento;
+			sourceTree = "<group>";
+		};
+		E2CE8E192433D50500D234B3 /* UndoAndRedo */ = {
+			isa = PBXGroup;
+			children = (
+				E2CE8E1A2433D50500D234B3 /* main.cpp */,
+			);
+			path = UndoAndRedo;
+			sourceTree = "<group>";
+		};
 		E2E7CF0223982E8000C80C80 /* Behavioral */ = {
 			isa = PBXGroup;
 			children = (
+				E2CE8E082433D2AA00D234B3 /* Memento */,
 				E2CE8DDA242E913900D234B3 /* Mediator */,
 				E2E7CF0323982EE000C80C80 /* Iterator */,
 			);
@@ -1399,6 +1465,40 @@
 			productReference = E2CE8DF9242F571300D234B3 /* ChatRoom */;
 			productType = "com.apple.product-type.tool";
 		};
+		E2CE8E0C2433D2FD00D234B3 /* Memento */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2CE8E112433D2FD00D234B3 /* Build configuration list for PBXNativeTarget "Memento" */;
+			buildPhases = (
+				E2CE8E092433D2FD00D234B3 /* Sources */,
+				E2CE8E0A2433D2FD00D234B3 /* Frameworks */,
+				E2CE8E0B2433D2FD00D234B3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Memento;
+			productName = Memento;
+			productReference = E2CE8E0D2433D2FD00D234B3 /* Memento */;
+			productType = "com.apple.product-type.tool";
+		};
+		E2CE8E172433D50500D234B3 /* UndoAndRedo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2CE8E1C2433D50500D234B3 /* Build configuration list for PBXNativeTarget "UndoAndRedo" */;
+			buildPhases = (
+				E2CE8E142433D50500D234B3 /* Sources */,
+				E2CE8E152433D50500D234B3 /* Frameworks */,
+				E2CE8E162433D50500D234B3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UndoAndRedo;
+			productName = UndoAndRedo;
+			productReference = E2CE8E182433D50500D234B3 /* UndoAndRedo */;
+			productType = "com.apple.product-type.tool";
+		};
 		E2E7CF082398362800C80C80 /* BinaryTreeIterator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2E7CF0D2398362800C80C80 /* Build configuration list for PBXNativeTarget "BinaryTreeIterator" */;
@@ -1497,6 +1597,12 @@
 					E2CE8DF8242F571300D234B3 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
+					E2CE8E0C2433D2FD00D234B3 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					E2CE8E172433D50500D234B3 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					E2E7CF082398362800C80C80 = {
 						CreatedOnToolsVersion = 10.2;
 					};
@@ -1539,6 +1645,8 @@
 				E2E7CF082398362800C80C80 /* BinaryTreeIterator */,
 				E2CE8DDE242E918100D234B3 /* EventBroker */,
 				E2CE8DF8242F571300D234B3 /* ChatRoom */,
+				E2CE8E0C2433D2FD00D234B3 /* Memento */,
+				E2CE8E172433D50500D234B3 /* UndoAndRedo */,
 			);
 		};
 /* End PBXProject section */
@@ -1744,6 +1852,22 @@
 				E2CE8E07242F7CAE00D234B3 /* Person.cpp in Sources */,
 				E2CE8E06242F7CAA00D234B3 /* ChatRoom.cpp in Sources */,
 				E2CE8DFC242F571300D234B3 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2CE8E092433D2FD00D234B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2CE8E102433D2FD00D234B3 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2CE8E142433D50500D234B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2CE8E1B2433D50500D234B3 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2285,6 +2409,42 @@
 			};
 			name = Release;
 		};
+		E2CE8E122433D2FD00D234B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E2CE8E132433D2FD00D234B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E2CE8E1D2433D50500D234B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E2CE8E1E2433D50500D234B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		E2E7CF0E2398362800C80C80 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2525,6 +2685,24 @@
 			buildConfigurations = (
 				E2CE8DFE242F571300D234B3 /* Debug */,
 				E2CE8DFF242F571300D234B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2CE8E112433D2FD00D234B3 /* Build configuration list for PBXNativeTarget "Memento" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2CE8E122433D2FD00D234B3 /* Debug */,
+				E2CE8E132433D2FD00D234B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2CE8E1C2433D50500D234B3 /* Build configuration list for PBXNativeTarget "UndoAndRedo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2CE8E1D2433D50500D234B3 /* Debug */,
+				E2CE8E1E2433D50500D234B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
