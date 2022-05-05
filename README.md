@@ -621,11 +621,68 @@ public class SQLProductRepository  {
 flowchart TD
   id1(ProductCatalog) --> id10(ProductRepository)
   id2(SQLProductRepository) --> id10
+  id1 --> id11(ProductFactory)
 ```
 
 * **First i.e, high level do not depend onthe low level.**
-* **Second i.e, the detail is dependent on the abstract **
+* **Second i.e, the detail is dependent on the abstract**
 
 #### Dependency Injection
+- Even with the above solution the responsibilty of creation is with the ProductCatalog class. we do not want that !
+- Avoids tight coupling
+- Avoids a class creating it's dependencies.
+- Inversion of control
+
+```java
+public class ECommerceMainApplication {
+  public static main(String[] args) {
+    ProductRepository productRepository = new ProductFactory.create();
+    ProductCatalog productCatalog = new ProductCatalog(productRepository);
+    productCatalog.listAllProducts();
+  }
+}
+public class ProductCatalog {
+  private ProductRepository productRepository;
+  
+  public ProductCatalog( ProductRepository productRepository) {
+    this.productRepository = productRepository;
+  }
+  
+  public void listAllProducts() {
+    List<String> allProductNames = productRepository.getAllProductNames();
+  }
+}
+
+public class ProductFactory {
+  pubilc static ProductRepository create(){
+    return new SQLProductRepository();
+  }
+}
+
+public interface ProductRepository {
+  public List<String> getAllProductNames();
+}
+
+public class SQLProductRepository  {
+  public List<String> getAllProductNames() {
+    return Arrays.asList("soap", "toothpaste");
+  }
+}
+```
+
+#### Inversion of Control (IOC)
+
+- In the above code, injection is happening in the main control flow of the program!
+- i.e, in the main thread.. what if we want this to happen in different thread or context ?
+
+##### ✔️ Sprint IOC Container
+
+- main context
+- spring context
+
+> _Spring context --> Here is the productCatalog object. I have already provided it all its dependencies - a new SQLProductRepository object. --> Main context_
+
+
+
 
 
