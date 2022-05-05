@@ -369,8 +369,6 @@ public class RacingCar extends Vehicle {
 
 Another example :
 
-### ✔️ Solution: Tell don't ask !
-
 i.e, 
 ```
 if (product instanceof InHousProduct)
@@ -382,6 +380,8 @@ to
 
 product.getDiscount();
 ```
+
+### ✔️ Solution: Tell don't ask !
 
 ```mermaid
 classDiagram
@@ -420,6 +420,118 @@ public class InHouseProduct extends Product {
   }
 }
 ```
+
+***
+
+## 4. Interface Segregation principle
+
+_"No client should be forced to depend on methods it does not use."_
+
+Design to represent all things in the office
+- Printer
+- Scanner 
+
+But came across multi purpose device (XeroxWork center) which supports nearly all of them.. 
+
+```mermaid
+classDiagram
+class IMultiFunction {
+  <<interface>>
+  + void print();
+  + void getPrintSpoolDetails();
+  + void scan();
+  + void scanPhoto();
+  + void fax();
+  + void internetFax();
+}
+IMultiFunction <|-- XeroxWorkCenter
+IMultiFunction <|-- HPPrinterNScanner
+IMultiFunction <|-- CanonPrinter
+
+class XeroxWorkCenter {
+  + void print();
+  + void getPrintSpoolDetails();
+  + void scan();
+  + void scanPhoto();
+  + void fax();
+  + void internetFax();
+}
+class HPPrinterNScanner {
+  + void print();
+  + void getPrintSpoolDetails();
+  + void scan();
+  + void scanPhoto();
+  + ~~empty impl~~ void fax();
+  + ~~empty impl~~ void internetFax();
+}
+class CanonPrinter {
+  + void print();
+  + void getPrintSpoolDetails();
+  + ~~empty impl~~ void scan();
+  + ~~empty impl~~ void scanPhoto();
+  + ~~empty impl~~ void fax();
+  + ~~empty impl~~ void internetFax();
+}
+```
+
+**Issue:**
+- A programmer tries to send a fax using the canon.. but empty implementation !
+
+### ✔️Solution : Split the big interface in to smaller interfaces.
+
+```mermaid
+classDiagram
+class IPrint {
+  <<interface>>
+  + void print();
+  + void getPrintSpoolDetails();
+}
+class IScan {
+  <<interface>>
+  + void scan();
+  + void scanPhoto();
+}
+class IFax {
+  <<interface>>
+  + void fax();
+  + void internetFax();
+}
+IPrint <|-- XeroxWorkCenter
+IScan <|-- XeroxWorkCenter
+IFax <|-- XeroxWorkCenter
+IPrint <|-- HPPrinterNScanner
+IScan <|-- HPPrinterNScanner
+IPrint <|-- CanonPrinter
+
+class XeroxWorkCenter {
+  + void print();
+  + void getPrintSpoolDetails();
+  + void scan();
+  + void scanPhoto();
+  + void fax();
+  + void internetFax();
+}
+class HPPrinterNScanner {
+  + void print();
+  + void getPrintSpoolDetails();
+  + void scan();
+  + void scanPhoto();
+}
+class CanonPrinter {
+  + void print();
+  + void getPrintSpoolDetails();
+}
+```
+
+#### Techniques to identify violations of ISP
+- Fat Interfaces. : Interfaces with high number of methods.
+- Interfaces with Low cohesion : In above, fax, photoscan .. are totally different (no cohesion)
+- Empty Method Implementations.
+
+
+#### Relations with other solid principles
+- Following automatically SRP
+- Follows Liskov substituion principle.
 
 
 
