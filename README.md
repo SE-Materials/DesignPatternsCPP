@@ -166,7 +166,88 @@ public class StudentRepository {
 
 ## 2. Open closed Principle
 
+_"Software Components should be closed for modification, but open for extension._
+
+E.g : To add any feature, we did not do any change in the hardware of the existing console. But made it possible to add new features (extensions) like steering, guns. etc. 
+
+**Closed for modification : **
+- New features getting added to the sofware component, should NOT have to modify the existing code.
+
+**Open for extension:**
+- A software component should be extendable to add a new feature or to add a new behaviour to it. 
+
+
+_**One State Insurance - For all your health insurance needs.**_
+```java
+public class InsurancePremiumDiscountCalculator {
+  public int CalculatePremiumDiscountPercent(HealthInsuranceCustomerProfile customer) {
+    if (customer.isLoyalCustomer()) {
+      return 20;
+    }
+    return 0;
+  }
+}
+
+public class HealthInsuranceCustomerProfile {
+  public boolean isLoyalCustomer() {
+    return true; // or false
+  }
+}
+```
+
+One State insurance acquires a vehicle insurance company...   
+
+_**One State Insurance - For all your health and vehicle insurance needs.**_
+
+Add a method and an overloaded method  
+```java
+public class VehicleInsuranceCustomerProfile {
+  public boolean isLoyalCustomer() {
+    return true; // or false
+  }
+}
+
+public class InsurancePremiumDiscountCalculator {
+  public int CalculatePremiumDiscountPercent(HealthInsuranceCustomerProfile customer) {
+    if (customer.isLoyalCustomer()) {
+      return 20;
+    }
+    return 0;
+  }
+  
+  public int CalculatePremiumDiscountPercent(VehicleInsuranceCustomerProfile customer) {
+    if (customer.isLoyalCustomer()) {
+      return 20;
+    }
+    return 0;
+  }
+}
+```
+
+**Refactor to have a base class**
+
+```mermaid
+classDiagram
+CustomerProfile <|-- HealthInsuranceCustomerProfile
+CustomerProfile <|-- VehicleInsuranceCustomerProfile
+CustomerProfile : public boolean isLoyalCustomer()
+HealthInsuranceCustomerProfile : override public boolean isLoyalCustomer()
+VehicleInsuranceCustomerProfile : override public boolean isLoyalCustomer()
+class InsurancePremiumDiscountCalculator {
+  + public int calculatePremiumDiscountPercent(CustomerProfile customer)
+}
+```
+
+Now, if we need to say add another for Home insurance.. we do not need to modify any existing code. We just need to add an extra class `HomeInsuranceCustomerProfile`
+
+### Takeaways
+- Ease of adding new features
+- Leads to minimal cost of developing and testing software.
+- Open Closed Principle often requires decoupling, which in turn, automatically follows single responsibility principle.
+
+
 ***
+
 ## 3. Liskov Substitution Principle
 
 
