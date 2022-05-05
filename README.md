@@ -10,7 +10,7 @@
 
 ### Cohesion 
 
-It is the degree to which the various parts of a software components are related.
+_It is the degree to which the various parts of a software components are related._  
 E.g : Scattered Garbage (low cohesion) -> Segregated garbage bin bags (high cohesion)
 
 ```java
