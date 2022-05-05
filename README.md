@@ -170,7 +170,7 @@ _"Software Components should be closed for modification, but open for extension.
 
 E.g : To add any feature, we did not do any change in the hardware of the existing console. But made it possible to add new features (extensions) like steering, guns. etc. 
 
-**Closed for modification : **
+**Closed for modification :**
 - New features getting added to the sofware component, should NOT have to modify the existing code.
 
 **Open for extension:**
