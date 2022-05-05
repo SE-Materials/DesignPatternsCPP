@@ -250,5 +250,176 @@ Now, if we need to say add another for Home insurance.. we do not need to modify
 
 ## 3. Liskov Substitution Principle
 
+_"Objects should be replaceable with their subtypes without affecting the correctness of the program."_
+
+**Problem:** The 'Is-A' way of thinking.
+- Gasoline is a fuel
+- Car is a vehicle
+- Ostrich is a bird. But..... Ostrich can not fly.
+
+```java
+public class Bird {
+  public void fly() {
+    // fly high
+  }
+}
+
+public class Ostrich extends Bird {
+  @override
+  public void fly() {
+    throw new RuntimeException();
+  }
+}
+```
+
+**Fails:** _"Objects should be replaceable with their subtypes without affecting the correctness of the program."_
+If someone calls `fly` on ostrich.
+
+> _**Change the `Is-A` way of thinking**_
+
+
+Another example.
+
+```mermaid
+classDiagram
+Car <|-- RacingCar
+class Car {
+  + public void getCabinWidth()
+}
+class RacingCar {
+  + @override public void getCabinWidth() // unimplemented
+  + public double getCockpitWidth()
+}
+```
+
+```java
+public class Car {
+  public double getCabinWidth() {
+    // return cabin width
+  }
+}
+
+public class RacingCar extends Car {
+  @override
+  public double getCabinWidth() {
+    // unimplemented
+  }
+  
+  public double getCockpitWidth() {
+    // return cock  pit width
+  }
+}
+```
+
+Usage:
+```java
+ public class CarUtils {
+  public static void main(String[] args) {
+    Car first = new Car();
+    Car second = new Car();
+    Car third = new RacingCar();
+    
+    List<Car> myCars = new ArrayList<>();
+    myCars.add(first);
+    myCars.add(second);
+    myCars.add(third);
+    
+    for (Car car : myCars)
+      System.out.Println(car.getCabinWidth()):
+  }
+ }
+```
+
+
+### ✔️ Solution: Break the hierarchy if the substitution fails
+```mermaid
+classDiagram
+Vehicle <|-- RacingCar
+Vehicle <|-- Car
+```
+
+```java
+public class Vehicle {
+  public double getInteriorWidth() {
+  }
+}
+
+public class Car extends Vehicle {
+  @override
+  public double getInteriorWidth() {
+    return this.getCabinWidth();
+  }
+  
+  public double getCabinWidth() {
+    // return cabin width
+  }
+}
+
+public class RacingCar extends Vehicle {
+  @override
+  public double getInteriorWidth() {
+    return this.getCockpitWidth();
+  }
+  
+  public double getCockpitWidth() {
+    // return cock pit width
+  }
+}
+```
+
+Another example :
+
+### ✔️ Solution: Tell don't ask !
+
+i.e, 
+```
+if (product instanceof InHousProduct)
+  ((InHouseProduct)product).applyExtraDiscount();
+product.getDiscount();
+
+
+to 
+
+product.getDiscount();
+```
+
+```mermaid
+classDiagram
+Product <|-- InHouseProduct
+class Product {
+  # double discount
+  + double getDiscount();
+}
+class InHouseProduct {
+  + double getDiscount();
+  + void applyExtraDiscount();
+}
+```
+
+**Liskov substitution passes.**
+
+```java
+public class Product {
+  protected double discount = 20;
+  
+  public double getDiscount() {
+    return discount;
+  }
+}
+
+public class InHouseProduct extends Product {
+  
+  @override 
+  public double getDiscount() {
+    applyExtraDiscount():
+    return discount;
+  }
+  
+  public void applyExtraDiscount() {
+    discount = discount * 1.5;
+  }
+}
+```
+
 
 
