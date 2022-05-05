@@ -534,4 +534,98 @@ class CanonPrinter {
 - Follows Liskov substituion principle.
 
 
+***
+
+## 5. Dependency Inversion principle (DIP)
+
+- _"High-level modules should not depend on low-level modules. Both should depend on abstractions"_
+- _"Abstractions should not depend on details. Details should depend on abstractions."_
+
+#### High level / Low level module
+
+* The term is relative. 
+
+```mermaid
+flowchart TD
+  id1(ProductCatalog) --> id2(SQLProductRepository)
+  id3(PaymentProcessor) --> id4(GooglePayGateway)
+  id3 --> id5(WireTransfer)
+  id6(CustomerProfile) --> id7(Communication)
+  id7 --> id8(EmailSender)
+  id7 --> id9(VoiceDialer)
+  subgraph 1
+  id1
+  id3
+  id6
+  end
+  subgraph 2
+  id2
+  id4
+  id5
+  id7
+  end
+  subgraph 3
+  id8
+  id9
+  end
+```
+
+❌ **Breaks DIP as high level modules depends on low modules**
+
+```java
+public class ProductCatalog {
+  public void listAllProducts() {
+    SQLProductRepository sqlProductRepository = new SQLProductRepository();
+    
+    List<String> allProductNames = sqlProductRepository.getAllProductNames();
+  }
+}
+
+
+public class SQLProductRepository  {
+  public List<String> getAllProductNames() {
+    return Arrays.asList("soap", "toothpaste");
+  }
+}
+```
+
+#### ✔️ Solution: Both should depend on abstractions !
+
+```java
+public class ProductCatalog {
+  public void listAllProducts() {
+    ProductRepository productRepository = ProductFactory.create();
+    
+    List<String> allProductNames = productRepository.getAllProductNames();
+  }
+}
+
+public class ProductFactory {
+  pubilc static ProductRepository create(){
+    return new SQLProductRepository();
+  }
+}
+
+public interface ProductRepository {
+  public List<String> getAllProductNames();
+}
+
+public class SQLProductRepository  {
+  public List<String> getAllProductNames() {
+    return Arrays.asList("soap", "toothpaste");
+  }
+}
+```
+
+```mermaid
+flowchart TD
+  id1(ProductCatalog) --> id10(ProductRepository)
+  id2(SQLProductRepository) --> id10
+```
+
+* **First i.e, high level do not depend onthe low level.**
+* **Second i.e, the detail is dependent on the abstract **
+
+#### Dependency Injection
+
 
